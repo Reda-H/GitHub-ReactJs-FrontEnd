@@ -21,13 +21,13 @@ class GitPage extends Component {
     }
     render() {
         return (
-            <div className={`git-page`} style={{ width: '100vw' }}>
+            <div className={`git-page`} style={{width: '100vw', padding: '8px'}}>
                 <div>
                     <Header username={this.state.user.name} />
                     <Hero />
-                    <Paper elevation={4}>
+                    <Paper elevation={4} style={{border: '1px solid', position: 'relative', bottom: '12px'}}>
                         <Wrapper>
-                            <Paper elevation={4} style={{ position: 'relative', bottom: '5vh' }}>
+                            <Paper elevation={4} style={{ position: 'relative', bottom: '5vh', border: '1px solid' }}>
                                 <AvatarComponent link={this.state.user.avatar_url} username={this.state.user.name} login={this.state.user.login} />
                                 <ListButtons twitterUrl={this.state.user.twitter_username} websiteUrl={this.state.user.blog} />
                                 <TabsPage 

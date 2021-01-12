@@ -1,4 +1,4 @@
-import { InputAdornment, TextField, Grid, IconButton } from '@material-ui/core';
+import { InputAdornment, TextField, Grid, IconButton, Typography } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
         justifyItems: 'center',
     },
     button: {
+        color: 'linear-gradient(45deg, #516395 20 %, #614385 90 %)',
     }
 }))
 
@@ -38,16 +39,15 @@ export default function UsernameInput({ setUsername, formSubmit }) {
                     direction="row"
                     justify="center"
                     alignItems="center"
-                    style={{ minHeight: '80%' }}>
+                    style={{ minHeight: '100%' }}>
 
                     <form method='POST' id={'gatherUsername'} onSubmit={formSubmit} className={`${classes.form}`}>
                         <Grid container
                             direction="row"
                             justify="center"
-                            alignItems="center"
-                            style={{ minHeight: '80%' }}>
+                            alignItems="center">
                             <TextField
-                                label="Enter your username"
+                                label={<Typography variant={'button'}> Enter your username </Typography>}
                                 id="standard-start-adornment"
                                 type="text"
                                 className={`${classes.margin} ${classes.textField}`}

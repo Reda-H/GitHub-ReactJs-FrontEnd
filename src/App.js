@@ -41,7 +41,7 @@ function App() {
       username: username,
     }
     return await axios.post(`http://127.0.0.1:3000/followed`, { data }, { headers: { "Access-Control-Allow-Origin": "*" } })
-      .then(res => { if (res.status === 200) { return res.data;} })
+      .then(res => { if (res.status === 200) { console.log(res.data); return res.data;} })
       .catch(error => console.log(error))
   }
 
@@ -50,12 +50,12 @@ function App() {
       username: username,
     }
     return await axios.post(`http://127.0.0.1:3000/repos`, { data }, { headers: { "Access-Control-Allow-Origin": "*" } })
-      .then(res => { if (res.status === 200) { console.log(res); return res.data; } })
+      .then(res => { if (res.status === 200) { return res.data; } })
       .catch(error => console.log(error))
   }
 
   return (
-    <div className="App">
+    <div className="App" style={{padding: 0}}>
       <Box display="flex" justifyContent='space-around' maxWidth="sm" height="90vh">
         {dataLoaded ?
           <GitPage user={user} handleFollowers={fetchUserFollowers} handleFollowed={fetchUserFollowed} handleRepos={fetchListRepos}/>

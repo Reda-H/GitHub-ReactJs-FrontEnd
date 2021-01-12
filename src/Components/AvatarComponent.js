@@ -51,7 +51,7 @@ export default function AvatarComponent({ link, username, login }) {
             <Typography variant={`h5`} color="textPrimary" className={`${classes.textCentered} ${classes.textMargin}`}>
                 {username}
             </Typography>
-            <a className={`${classes.linkDecoration}`} href={`https://github.com/${login}`}>
+            <a className={`${classes.linkDecoration}`} href={`https://github.com/${login}`} target="_blank" rel="noreferrer">
                 <Typography variant={`h6`} color="textPrimary" className={`${classes.textCentered} ${classes.textMargin}`}>
                     {'{ ' + login + ' }'}
                 </Typography>

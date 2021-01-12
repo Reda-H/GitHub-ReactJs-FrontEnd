@@ -17,7 +17,7 @@ function Header({username}) {
         <div>
             <AppBar position="fixed" color={'inherit'} className={`${classes.appBar}`}>
                 <Toolbar>
-                    <Typography variant={`h6`} color="textPrimary">Made by <Link>Herradi Reda</Link> for {username}</Typography>
+                    <Typography variant={`h6`} color="textPrimary">Made by <Link href={`https://github.com/Reda-H`} target="_blank">Herradi Reda</Link> for {username}</Typography>
                 </Toolbar>
             </AppBar>
             <div className={classes.offset} />
